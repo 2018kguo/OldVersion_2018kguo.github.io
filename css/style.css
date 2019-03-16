@@ -97,7 +97,7 @@ body, html {
   width: 80vw;
   filter: invert(90%);
   text-align: center;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 #links {
@@ -195,4 +195,8 @@ to align it properly */
 
 .wrapper ul li .fa-medium,.fa-github,.fa-id-card,.fa-linkedin{
   transition: all 0.5s ease;
+}
+
+a {
+    color: inherit;
 }
