@@ -3,34 +3,98 @@
 <head>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Source+Code+Pro|Source+Sans+Pro|Ubuntu+Mono" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="fireflies.js"></script>
 </head>
-<body onload="typeWriter()">
+<body>
   <div id="cube-pic-background"></div>
   <div id="background-pic">
-    <img id="background-image" src="images/background.png"/>
+    <img id="background-image" src="images/background.jpg"/>
     <div id="my-info">
-      <h1 id="my-name"></div>
-
+      <h1 id="my-name">Hi, I'm Kevin.</h1>
+    </div>
+    <h2 id="my-description">
+      My name is Kevin Guo. I'm a student at UT Austin, pursuing a bachelor's degree in Computer Science.
+    </h2>
+    <div id="resume-fireflies">
+    </div>
+    <div id="github-fireflies">
+    </div>
+    <div id="medium-fireflies">
+    </div>
+    <div id="linkedin-fireflies">
+    </div>
+    <div id="links" class="wrapper">
+      <ul>
+        <li id="resume-id" class="resume"><i class="fas fa-id-card fa-7x" aria-hidden="true"></i></li>
+        <li id="github-icon" class="github"><i class="fab fa-github fa-7x" aria-hidden="true"></i></li>
+        <li id="medium-icon" class="medium"><i class="fab fa-medium fa-7x" aria-hidden="true"></i></li>
+        <li id="linkedin-icon" class="linkedin"><i class="fab fa-linkedin fa-7x" aria-hidden="true"></i></li>
+      </ul>
     </div>
   </div>
 </body>
 <script>
-  var i = 0;
-  var txt = "Hi, I'm Kevin.";
-  var speed = 70;
-  var pause = 200;
-  function typeWriter() {
-    if (i < txt.length) {
-      document.getElementById("my-name").innerHTML += txt.charAt(i);
-      i++;
-      if(i==3){
-        setTimeout(typeWriter, pause);
-      }
-      else{
-        setTimeout(typeWriter, speed);
-      }
-    }
-  }
+  $(document).ready(function(){
+    $.firefly({
+          color: '#c4a667CC',
+          minPixel: 2,
+          maxPixel: 5,
+          total : 35,
+          on: '#resume-fireflies'
+    });
+    $.firefly({
+          color: '#ff5312CC',
+          minPixel: 2,
+          maxPixel: 5,
+          total : 35,
+          on: '#github-fireflies'
+    });
+    $.firefly({
+          color: '#43d572CC',
+          minPixel: 2,
+          maxPixel: 5,
+          total : 35,
+          on: '#medium-fireflies'
+    });
+    $.firefly({
+          color: '#22b4c6CC',
+          minPixel: 2,
+          maxPixel: 5,
+          total : 35,
+          on: '#linkedin-fireflies'
+    });
+    $("#my-name").delay(300).fadeIn(1500);
+    $("#my-description").delay(500).fadeIn(1500);
+    $("#links").delay(700).fadeIn(1500);
+    $("#cube-pic-background").delay(50).fadeIn();
+    $("#background-image").delay(50).fadeIn();
+  });
+  $("#resume-id").mouseenter(function(){
+      $("#resume-fireflies").delay(200).fadeIn("slow");
+  });
+  $("#resume-id").mouseleave(function(){
+    $("#resume-fireflies").fadeOut(500);
+  });
+  $("#github-icon").mouseenter(function(){
+    $("#github-fireflies").delay(200).fadeIn("slow");
+  });
+  $("#github-icon").mouseleave(function(){
+    $("#github-fireflies").fadeOut(500);
+  });
+  $("#medium-icon").mouseenter(function(){
+    $("#medium-fireflies").delay(200).fadeIn("slow");
+  });
+  $("#medium-icon").mouseleave(function(){
+    $("#medium-fireflies").fadeOut(500);
+  });
+  $("#linkedin-icon").mouseenter(function(){
+    $("#linkedin-fireflies").delay(200).fadeIn("slow");
+  });
+  $("#linkedin-icon").mouseleave(function(){
+    $("#linkedin-fireflies").fadeOut(500);
+  });
 </script>
 </html>
