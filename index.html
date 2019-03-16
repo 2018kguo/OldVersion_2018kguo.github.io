@@ -10,7 +10,7 @@
 <body>
   <div id="cube-pic-background"></div>
   <div id="background-pic">
-    <img id="background-image" src="images/background.jpg"/>
+    <img id="background-image" src="images/background-min.jpg"/>
     <div id="my-info">
       <h1 id="my-name">Hi, I'm Kevin.</h1>
     </div>
@@ -27,10 +27,10 @@
     </div>
     <div id="links" class="wrapper">
       <ul>
-        <li id="resume-id" class="resume"><i class="fas fa-id-card fa-7x" aria-hidden="true"></i></li>
-        <li id="github-icon" class="github"><i class="fab fa-github fa-7x" aria-hidden="true"></i></li>
-        <li id="medium-icon" class="medium"><i class="fab fa-medium fa-7x" aria-hidden="true"></i></li>
-        <li id="linkedin-icon" class="linkedin"><i class="fab fa-linkedin fa-7x" aria-hidden="true"></i></li>
+        <li id="resume-id" class="icon"><i class="fas fa-id-card fa-7x" aria-hidden="true"></i></li>
+        <li id="github-icon" class="icon"><i class="fab fa-github fa-7x" aria-hidden="true"></i></li>
+        <li id="medium-icon" class="icon"><i class="fab fa-medium fa-7x" aria-hidden="true"></i></li>
+        <li id="linkedin-icon" class="icon"><i class="fab fa-linkedin fa-7x" aria-hidden="true"></i></li>
       </ul>
     </div>
   </div>
@@ -65,11 +65,11 @@
           total : 35,
           on: '#linkedin-fireflies'
     });
-    $("#my-name").delay(300).fadeIn(1500);
-    $("#my-description").delay(500).fadeIn(1500);
-    $("#links").delay(700).fadeIn(1500);
-    $("#cube-pic-background").delay(50).fadeIn();
-    $("#background-image").delay(50).fadeIn();
+    $("#my-name").delay(300).fadeIn(1000);
+    $("#my-description").delay(500).fadeIn(1000);
+    $("#links").delay(700).fadeIn(1000);
+    $("#cube-pic-background").fadeIn("slow");
+    $("#background-image").fadeIn("slow");
   });
   $("#resume-id").mouseenter(function(){
       $("#resume-fireflies").fadeIn("slow");
