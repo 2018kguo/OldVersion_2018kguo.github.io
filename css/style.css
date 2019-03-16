@@ -7,13 +7,12 @@ body, html {
   max-height: 100vh;
   min-width: 100vw;
   background: #C1C1C0;
-  color: black;
+  overflow: hidden;
 }
 
 #background-image{
   height: 80vh;
   width: 80vw;
-  object-fit: cover;
   margin-top: 5vh;
   filter: blur(2px) brightness(40%) contrast(150%);
   opacity: 0.8;
@@ -25,8 +24,8 @@ body, html {
   position: absolute;
   top: 35%;
   left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
+  //-webkit-transform: translate(-50%,-50%);
+  //-ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   color: #fff;
   text-align: center;
@@ -39,7 +38,6 @@ body, html {
   padding-left: 10vw;
   padding-right: 0;
   float: left;
-  display: flex;
   position: relative;
   z-index: 2;
 }
@@ -96,8 +94,7 @@ body, html {
 .wrapper {
   position: absolute;
   top: 60vh;
-  left: 24.6vw;
-  width: 50vw;
+  width: 80vw;
   filter: invert(90%);
   text-align: center;
   opacity: 0.85;
@@ -110,24 +107,20 @@ body, html {
 /* Style the Un-order list by setting its list-style to none */
 .wrapper ul {
   list-style: none;
+  display: inline-block;
+  padding: 0;
 }
 
 /* Style the list items inside the UL list, by setting its width, height and line-height
   and float them to left and set its border and border-radius.
  */
 .wrapper ul li {
-  width: 75px;
-  height: 75px;
-  line-height: 75px;
+  width: 5vw;
   margin: 0 3.5vw;
   text-align: center;
   cursor: pointer;
   float: left;
   transition: all 0.5s ease;
-}
-
-#resume-id{
-  margin-right: 4.55vw;
 }
 
 #resume-fireflies{
