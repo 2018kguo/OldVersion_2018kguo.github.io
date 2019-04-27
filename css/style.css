@@ -176,8 +176,8 @@ to align it properly */
 }
 
 .wrapper ul li:hover .fa-github {
-  color: #00aced;
-  text-shadow: 0 0 15px #00aced;
+  color: #00acedaa;
+  text-shadow: 0 0 15px #00acedaa;
   transition: all 0.5s ease;
 }
 
