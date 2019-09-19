@@ -79,8 +79,9 @@
         for (i = 0; i < $.firefly.settings.total; i++) { // Run the next few lines of code for every firefly
             var randomPixel = $.firefly.randomPixel($.firefly.settings.minPixel, $.firefly.settings.maxPixel); // Get the size of the specific firefly
             var sp = $.firefly.create(randomPixel); // Create a new firefly using the size
-
-            $.firefly.fly(sp); // Call the recursive fly function
+            if($.firefly._paused == false){
+              $.firefly.fly(sp); // Call the recursive fly function
+            }
         }
 
         $.firefly.sparks = $($.firefly.settings.on).children('.' + $.firefly.settings.namespace); // Create a list of all of the fireflies
@@ -95,7 +96,6 @@
      */
     $.firefly.pause = function (bool) {
         $.firefly.settings._paused = true;
-
         if (bool) {
             $.each($.firefly.sparks, function (iter, sp) {
                 $(sp).stop(true);
@@ -150,7 +150,6 @@
      * @returns {undefined}
      */
     $.firefly.fly = function (sp) {
-        console.log($(sp).get())
         $(sp).animate({
             top: $.firefly.offsetTop + $.firefly.random(($.firefly.eleHeight - 50)), // Offset it to towards the bottom
             left: $.firefly.offsetLeft + $.firefly.random(($.firefly.eleWidth - 50)), // Offset it to towards the right
