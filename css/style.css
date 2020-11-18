@@ -63,7 +63,7 @@ body, html {
 }
 
 #my-description {
-  font-size: 1.5em;
+  font-size: 2.5vh;
   top: 50%;
   font-weight: normal;
   display: none;
@@ -129,7 +129,6 @@ body, html {
 }
 
 #resume-fireflies{
-  z-index = 101;
   position: absolute;
   width: 18vw;
   height: 20vh;
@@ -139,7 +138,6 @@ body, html {
 }
 
 #github-fireflies{
-  z-index = 102;
   position: absolute;
   width: 18vw;
   height: 20vh;
@@ -149,7 +147,6 @@ body, html {
 }
 
 #medium-fireflies{
-  z-index = 102;
   position: absolute;
   width: 18vw;
   height: 20vh;
@@ -159,7 +156,6 @@ body, html {
 }
 
 #linkedin-fireflies{
-  z-index = 102;
   position: absolute;
   width: 18vw;
   height: 20vh;
