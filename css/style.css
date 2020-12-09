@@ -23,10 +23,8 @@ body, html {
 }
 #my-info, #my-description {
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 50%;
-  //-webkit-transform: translate(-50%,-50%);
-  //-ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   color: #fff;
   text-align: center;
@@ -35,6 +33,16 @@ body, html {
 
 #my-description {
   text-align: left;
+  font-size: min(2.4vh, 2vw);
+  top: 45%;
+  font-weight: normal;
+  display: none;
+  width: 55vw;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-family: "Ubunto Mono", monospace;
 }
 
 #background-pic {
@@ -60,19 +68,6 @@ body, html {
   margin-inline-end: 0px;
   font-weight: bold;
   display:none;
-}
-
-#my-description {
-  font-size: min(2.5vh, 2vw);
-  top: 50%;
-  font-weight: normal;
-  display: none;
-  width: 40vw;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-family: "Ubunto Mono", monospace;
 }
 
 #cube-pic-background{
